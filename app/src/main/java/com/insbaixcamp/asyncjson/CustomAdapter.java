@@ -1,19 +1,17 @@
 package com.insbaixcamp.asyncjson;
 
 import android.content.Context;
-import android.support.design.widget.Snackbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class CustomAdapter extends ArrayAdapter<DataModel> implements View.OnClickListener{
+public class CustomAdapter extends ArrayAdapter<DataModel>{
 
     private ArrayList<DataModel> dataSet;
     Context mContext;
@@ -23,7 +21,6 @@ public class CustomAdapter extends ArrayAdapter<DataModel> implements View.OnCli
         TextView txtName;
         TextView txtType;
         TextView txtVersion;
-        ImageView info;
     }
 
     public CustomAdapter(ArrayList<DataModel> data, Context context) {
@@ -33,30 +30,16 @@ public class CustomAdapter extends ArrayAdapter<DataModel> implements View.OnCli
 
     }
 
-    @Override
-    public void onClick(View v) {
 
-        int position=(Integer) v.getTag();
-        Object object= getItem(position);
-        DataModel dataModel=(DataModel)object;
-
-        switch (v.getId())
-        {
-            case R.id.lvAndroid:
-                Snackbar.make(v, "Release date " +dataModel.getFeature(), Snackbar.LENGTH_LONG)
-                        .setAction("No action", null).show();
-                break;
-        }
-    }
 
     private int lastPosition = -1;
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // Get the data item for this position
+
         DataModel dataModel = getItem(position);
-        // Check if an existing view is being reused, otherwise inflate the view
-        ViewHolder viewHolder; // view lookup cache stored in tag
+
+        ViewHolder viewHolder;
 
         final View result;
 
@@ -84,7 +67,7 @@ public class CustomAdapter extends ArrayAdapter<DataModel> implements View.OnCli
         viewHolder.txtName.setText(dataModel.getName());
         viewHolder.txtType.setText(dataModel.getType());
         viewHolder.txtVersion.setText(dataModel.getVersion_number());
-        // Return the completed view to render on screen
+
         return convertView;
     }
 }

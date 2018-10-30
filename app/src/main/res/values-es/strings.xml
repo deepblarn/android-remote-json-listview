@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AsyncJSON</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="version_snack">version: </string>
+    <string name="android_name">Nombre de la version: </string>
+    <string name="lang">El idioma es: %s</string>
+    <string name="loading_title">Cargando contenido</string>
+    <string name="loading_text">Espera...</string>
+    <string name="company_name">Nombre de la empresa: Pipo</string>
+    <string name="author_name">Nombre del autor: Jaume Mora</string>
+
+</resources>

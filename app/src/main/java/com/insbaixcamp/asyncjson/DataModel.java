@@ -6,13 +6,11 @@ public class DataModel {
     String name;
     String type;
     String version_number;
-    String feature;
 
-    public DataModel(String name, String type, String version_number, String feature ) {
+    public DataModel(String name, String type, String version_number) {
         this.name=name;
         this.type=type;
         this.version_number=version_number;
-        this.feature=feature;
 
     }
 
@@ -28,8 +26,5 @@ public class DataModel {
         return version_number;
     }
 
-    public String getFeature() {
-        return feature;
-    }
 
 }

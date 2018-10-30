@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">AsyncJSON</string>
     <string name="action_settings">Settings</string>
+    <string name="version_snack">version number: </string>
+    <string name="android_name">Name of the version: </string>
+    <string name="lang">The language is: %s</string>
+    <string name="loading_title">Loading content</string>
+    <string name="loading_text">Wait...</string>
+    <string name="company_name">Company name: Pipo</string>
+    <string name="author_name">Author name: Jaume Mora</string>
+
+
 </resources>
